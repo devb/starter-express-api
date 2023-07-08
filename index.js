@@ -1,10 +1,7 @@
 const express = require('express');
-const {RtcTokenBuilder, RtcRole, RtmTokenBuilder, RtmRole} = require('agora-access-token');
 const cors = require('cors');
-const dotenv = require('dotenv');
 const {RtcTokenBuilder, RtcRole, RtmTokenBuilder, RtmRole} = require('agora-access-token');
 
-dotenv.config();
 const app = express();
 const APP_ID = "9d855aff0fcd4ebe918fbe9e23a8562c";
 const APP_CERTIFICATE = "fc5e1715f05f406e8ec4261817bbe440";
