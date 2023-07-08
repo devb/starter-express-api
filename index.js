@@ -59,7 +59,8 @@ const generateRTCToken = (req, resp) => {
     return resp.status(400).json({ 'error': 'token type is invalid' });
   }
   // return the token
-  return resp.json({ 'token': token });
+  return resp.status(200).json({success: true, token: token});
+  //return resp.json({ 'token': token });
 }
 
 const generateRTMToken = (req, resp) => {
@@ -87,7 +88,8 @@ const generateRTMToken = (req, resp) => {
   console.log(APP_ID, APP_CERTIFICATE, uid, role, privilegeExpireTime)
   const token = RtmTokenBuilder.buildToken(APP_ID, APP_CERTIFICATE, uid, role, privilegeExpireTime);
   // return the token
-  return resp.json({ 'token': token });
+  return resp.status(200).json({success: true, token: token});
+  //return resp.json({ 'token': token });
 }
 
 const generateRTEToken = (req, resp) => {
